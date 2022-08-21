@@ -1,0 +1,10 @@
+version: '3.7'
+services: 
+    fastapi:
+        container_name: fastapi
+        build:
+            context: ./app/
+            dockerfile: Dockerfile
+        restart: always
+        working_dir : /app/
+        entrypoint: sh entrypoint.sh
